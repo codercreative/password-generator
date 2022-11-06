@@ -41,14 +41,15 @@ body {
 }
 
 .btn {
-  width: 12em;
+  width: 12.5em;
   background-color: #047857;
   color: #fff;
-  padding: 0.5em;
+  padding: 1em 0;
   border-radius: 6px;
   cursor: pointer;
   border: none;
   margin: 2em 0;
+  font-size: 0.9rem;
 }
 
 .line {
@@ -63,14 +64,18 @@ body {
 }
 
 .pw-btn {
-  display: block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
   background-color: #273549;
-  height: 1.2em;
+
   border: none;
   border-radius: 4px;
   margin-top: 1.2em;
+
   width: 180px;
-  height: 2em;
+  height: 3.5em;
   color: #55f991;
   font-size: 0.8rem;
 }

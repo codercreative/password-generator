@@ -101,8 +101,8 @@ function generatePassword() {
     selected[i] = characters[Math.floor(Math.random() * characters.length)];
     pwOne.textContent = selected.join("");
   }
-  for (let j = 0; j < 15; j++) {
-    selected[j] = characters[Math.floor(Math.random() * characters.length)];
+  for (let i = 0; i < 15; i++) {
+    selected[i] = characters[Math.floor(Math.random() * characters.length)];
     pwTwo.textContent = selected.join("");
   }
 }
