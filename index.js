@@ -97,12 +97,16 @@ let pwTwo = document.getElementById("pw2");
 let selected = [];
 
 function generatePassword() {
+  selected = [];
+
   for (let i = 0; i < 15; i++) {
-    selected[i] = characters[Math.floor(Math.random() * characters.length)];
-    pwOne.textContent = selected.join("");
+    selected.push(characters[Math.floor(Math.random() * characters.length)]);
   }
-  for (let i = 0; i < 15; i++) {
-    selected[i] = characters[Math.floor(Math.random() * characters.length)];
-    pwTwo.textContent = selected.join("");
-  }
+  return selected.join("");
+}
+
+function renderPassword() {
+  pwOne.textContent = generatePassword();
+
+  pwTwo.textContent = generatePassword();
 }
