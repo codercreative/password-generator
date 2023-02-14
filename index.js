@@ -92,21 +92,30 @@ const characters = [
   "/",
 ];
 
-let pwOne = document.getElementById("pw1");
-let pwTwo = document.getElementById("pw2");
-let selected = [];
+const generateBtn = document.getElementById("generate-btn");
+const pwOne = document.getElementById("pw-1");
+const pwTwo = document.getElementById("pw-2");
 
-function generatePassword() {
-  selected = [];
+function randomNumber() {
+  return Math.floor(Math.random() * characters.length);
+}
 
+function getPassword() {
+  let password = "";
   for (let i = 0; i < 15; i++) {
-    selected.push(characters[Math.floor(Math.random() * characters.length)]);
+    const randomCharacter = characters[randomNumber()];
+    password += randomCharacter;
   }
-  return selected.join("");
+  return password;
 }
 
 function renderPassword() {
-  pwOne.textContent = generatePassword();
-
-  pwTwo.textContent = generatePassword();
+  pwOne.textContent = getPassword();
+  pwTwo.textContent = getPassword();
+  pwOne.classList.add("border");
+  pwTwo.classList.add("border");
 }
+
+generateBtn.addEventListener("click", function () {
+  renderPassword();
+});
